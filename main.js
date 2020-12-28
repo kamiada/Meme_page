@@ -14,7 +14,7 @@ function whatToLoad(menuItem) {
         return fetchData(apiDogs);
     }
     if (menuItem === 'Memes') {
-        return fetchData(apiMemes);
+        return fetchBlobData(apiMemes);
     }
     return fetchData(apiMemes);
 }
@@ -32,4 +32,17 @@ function fetchData(apiToCall) {
             console.log(pic)
         }))
         .catch(error => console.error(error));
+}
+
+function fetchBlobData(apiToCall) {
+    return fetch(apiToCall)
+    .then (response => response.blob())
+    .then(function(myBlob) {
+        const body = document.querySelector('body');
+        let objectURL = URL.createObjectURL(myBlob);
+        const image = document.createElement('img');
+        image.src = objectURL;
+        body.append(image);
+    })
+    .catch(error => console.error(error));
 }
