@@ -2,7 +2,7 @@
 
 //on click event - depending to what user picked from the menu, load this on the page
 const apiDogs = 'https://dog.ceo/api/breed/bulldog/images/random/50';
-const apiMemes = 'http://alpha-meme-maker.herokuapp.com/1';
+const apiMemes = 'http:find me some good meme API pls';
 
 function whatToLoad(menuItem) {
     const pictures = document.querySelector('img');

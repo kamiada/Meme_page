@@ -10,8 +10,6 @@ sass --watch style.scss:style.css
 this will copy everything what's happens in scss file into css file, and then be presented on the page (I couldn't not find better way to work with scss and html together without React or other extra frameworks).
 
 API with dogs: https://dog.ceo/dog-api/
-API with memes: https://mememaker.github.io/API/
-API with cats: 
 
 
 ## Goal of this project
