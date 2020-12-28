@@ -20,3 +20,8 @@ Used technologies: JavaScript, SCSS, HTML
 
 So far (28/12/2020) page looks like this - 
 ![Alt text](img/screenshot.JPG?raw=true "screenshot of the page")
+
+
+In case of requesting from meme API - 
+due to CORS issues it's recommended to install MOESIF CORS plugin in the browser and turn it 'on'. 
+After that blob should be loaded on the page as an image. 
