@@ -14,8 +14,11 @@ API with memes: https://mememaker.github.io/API/
 API with cats: 
 
 
-# Goal of this project
+## Goal of this project
 
 The simple goal of this project is to practise with API and styling. 
 
 Used technologies: JavaScript, SCSS, HTML
+
+So far (28/12/2020) page looks like this - 
+![Alt text](img/screenshot.JPG?raw=true "screenshot of the page")
