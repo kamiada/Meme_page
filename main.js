@@ -4,26 +4,22 @@
 const apiDogs = 'https://dog.ceo/api/breed/bulldog/images/random/50';
 const apiMemes = 'http://alpha-meme-maker.herokuapp.com/1';
 
-function whatToLoad (menuItem) {
+function whatToLoad(menuItem) {
     const pictures = document.querySelector('img');
-    if(typeof(pictures) != 'undefined' && pictures !=null){
-        location.reload(); 
+    if (typeof (pictures) != 'undefined' && pictures != null) {
+        location.reload();
     }
-    if(menuItem === 'Dogs')
-    {
-        return fetch(apiDogs)
-        .then(response => response.json())
-        .then(data=> data.message.map(pic => {
-            const body = document.querySelector('body');
-            const image = document.createElement('img');
-            image.src = pic;
-            body.append(image)
-            console.log(pic)
-        }))
-        .catch(error => console.error(error));
+    if (menuItem === 'Dogs') {
+        return fetchData(apiDogs);
     }
-    if(menuItem === 'Memes'){
-        return fetch(apiMemes)
+    if (menuItem === 'Memes') {
+        return fetchData(apiMemes);
+    }
+    return fetchData(apiMemes);
+}
+
+function fetchData(apiToCall) {
+    return fetch(apiToCall)
         .then(response => response.json())
         .then(data => data.message.map(pic => {
             const body = document.querySelector('body');
@@ -33,15 +29,4 @@ function whatToLoad (menuItem) {
             console.log(pic)
         }))
         .catch(error => console.error(error));
-    }
-    return fetch(apiMemes)
-    .then(response => response.json())
-    .then(data=> data.message.map(pic => {
-        const body = document.querySelector('body');
-        const image = document.createElement('img');
-        image.src = pic;
-        body.append(image)
-        console.log(pic)
-    }))
-    .catch(error => console.error(error));
 }
